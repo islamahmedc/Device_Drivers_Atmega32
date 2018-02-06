@@ -1,0 +1,55 @@
+/*
+ * Keypad.c
+ *
+ *  Created on: Jan 30, 2018
+ *      Author: Islam Ahmed 
+ *		Email : islamahmed.c@gmail.com
+ */
+
+#include "Types.h"
+#include "utilss.h"
+#include "avr/delay.h"
+#include "DIO.h"
+
+#define F_CPU 8000000
+
+void Keypad_voidInit(void)
+{
+	/* Port configuration */
+	DDRD=0x0F;		// upper Input --- lower Output
+	PORTD=0xF0;		// Output all 0
+	PIND=0xFF; 		// pull up resistors
+
+}
+
+
+//**************************************************************
+u8 Keypad_u8GetKey(void)
+{
+	u8 ColumnNumber=0,RowNumber=0;
+	while(get_nibbleHigh(PIND)==0xF);
+	_delay_ms(20);
+	while(get_nibbleHigh(PIND)==0xF);
+	_delay_ms(20);
+
+	/* determine column */
+	switch(get_nibbleHigh(PIND))
+	{
+		case 0b1110 :
+			ColumnNumber=1;
+			break;
+
+		case 0b1101 :
+			ColumnNumber=2;
+			break;
+
+		case 0b1011 :
+			ColumnNumber=3;
+			break;
+
+		case 0b0111 :
+			ColumnNumber=4;
+			break;
+
+	}
+}

@@ -1,0 +1,31 @@
+/*
+ * Keypad.c
+ *
+ *  Created on: Jan 30, 2018
+ *      Author: Islam Ahmed 
+ *		Email : islamahmed.c@gmail.com
+ */
+
+#include "Types.h"
+#include "utilss.h"
+#include "avr/delay.h"
+#include "DIO.h"
+
+#define F_CPU 8000000
+
+void Keypad_voidInit(void)
+{
+	/* Port configuration */
+	DDRD=0x0F;		// upper Input --- lower Output
+	PORTD=0xF0;		// Output all 0
+	PIND=0xFF; 		// pull up resistors
+
+}
+
+
+//**************************************************************
+u8 Keypad_u8GetKey(void)
+{
+	while(get_nibbleHigh(PIND)==0xF);
+
+}

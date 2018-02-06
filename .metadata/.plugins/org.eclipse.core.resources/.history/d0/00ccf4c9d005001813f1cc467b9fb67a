@@ -1,0 +1,32 @@
+/*
+ * Keypad.c
+ *
+ *  Created on: Jan 30, 2018
+ *      Author: Islam Ahmed 
+ *		Email : islamahmed.c@gmail.com
+ */
+
+#include "Types.h"
+#include "utilss.h"
+#include "DIO.h"
+
+
+
+void Keypad_voidInit(void)
+{
+	/* Port configuration */
+	DDRD=0x0F;		// upper Input --- lower Output
+	PORTD=0xF0;		// Output all 0
+	PIND=0xFF; 		// pull up resistors
+
+}
+
+
+//**************************************************************
+u8 Keypad_u8GetKey(void)
+{
+	while(1)
+	{
+
+	}
+}
