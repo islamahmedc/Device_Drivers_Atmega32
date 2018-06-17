@@ -51,6 +51,9 @@
 							<tool id="de.innot.avreclipse.tool.avrdude.app.debug.1967972056" name="AVRDude" superClass="de.innot.avreclipse.tool.avrdude.app.debug"/>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="de.innot.avreclipse.configuration.app.debug.46042111.1398603418" name="main.c" rcbsApplicability="disable" resourcePath="main.c" toolsToInvoke="de.innot.avreclipse.tool.compiler.winavr.app.debug.724859358.1492776120">
+						<tool id="de.innot.avreclipse.tool.compiler.winavr.app.debug.724859358.1492776120" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.app.debug.724859358"/>
+					</fileInfo>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -132,4 +135,5 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

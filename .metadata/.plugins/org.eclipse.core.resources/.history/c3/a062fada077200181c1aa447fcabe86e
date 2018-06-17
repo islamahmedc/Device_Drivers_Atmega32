@@ -45,6 +45,6 @@ u8 ADC_u8StartAndGet(void)
 	set_bit(ADCSRA,6);		/* Start Conversion */
 	while( (get_bit(ADCSRA,4))==0 )
 			; 				/* Polling mode */
-	return ADCH;//+(ADCL>>6);	/* Return Result */
+	return ADCH//+(ADCL>>6);	/* Return Result */
 
 }
