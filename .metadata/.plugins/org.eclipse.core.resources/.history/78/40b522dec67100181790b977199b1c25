@@ -23,7 +23,7 @@ void main()
 	_delay_ms(3000);
 	while (1)
 	{
-		LCD_Send_An_Integer( ((ADC_u8StartAndGet())/4) );
+		LCD_Send_An_Integer( ((ADC_u8StartAndGet())/1) );
 		_delay_ms(3000);
 		LCD_Send_A_String(" ");
 	}

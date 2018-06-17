@@ -20,11 +20,12 @@ void main()
 	LCD_voidLcdInit();
 	ADC_voidInit();
 	LCD_Send_A_String("temp ");
-	_delay_ms(3000);
+	//_delay_ms(3000);
 	while (1)
 	{
-		LCD_Send_An_Integer( ((ADC_u8StartAndGet())/4) );
-		_delay_ms(3000);
+		//LCD_Send_An_Integer( ((ADC_u8StartAndGet())/4) );
+		//_delay_ms(3000);
+		LCD_Send_An_Integer(250);
 		LCD_Send_A_String(" ");
 	}
 }

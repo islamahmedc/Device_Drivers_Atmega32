@@ -25,6 +25,7 @@ void main()
 	{
 		LCD_Send_An_Integer( ((ADC_u8StartAndGet())/4) );
 		_delay_ms(3000);
+		LCD_Send_An_Integer(143540);
 		LCD_Send_A_String(" ");
 	}
 }
